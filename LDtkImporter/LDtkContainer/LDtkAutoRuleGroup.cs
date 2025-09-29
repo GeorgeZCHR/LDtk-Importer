@@ -1,0 +1,34 @@
+using System.Text.Json.Serialization;
+
+public class LDtkAutoRuleGroup
+{
+    [JsonPropertyName("uid")]
+    public int Uid { get; set; } = -1;
+
+    [JsonPropertyName("name")]
+    public string Name { get; set; } = "";
+
+    [JsonPropertyName("color")]
+    public string? Color { get; set; }
+
+    [JsonPropertyName("icon")]
+    public LDtkTile? Icon { get; set; } // tile = icon
+
+    [JsonPropertyName("active")]
+    public bool Active { get; set; } = true;
+
+    [JsonPropertyName("isOptional")]
+    public bool IsOptional { get; set; } = false;
+
+    [JsonPropertyName("rules")]
+    public List<LDtkRule> Rules { get; set; } = new List<LDtkRule>();
+
+    [JsonPropertyName("usesWizard")]
+    public bool UsesWizard { get; set; } = true;
+
+    [JsonPropertyName("requiredBiomeValues")]
+    public List<string>? RequiredBiomeValues { get; set; }
+
+    [JsonPropertyName("biomeRequirementMode")]
+    public int BiomeRequirementMode { get; set; } = 0;
+}
