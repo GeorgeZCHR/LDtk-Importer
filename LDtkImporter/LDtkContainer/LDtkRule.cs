@@ -91,5 +91,10 @@ public class LDtkRule
 
     [JsonPropertyName("perlinOctaves")]
     public int PerlinOctaves { get; set; } = -1;
+
+    public override string ToString()
+    {
+        return System.Text.Json.JsonSerializer.Serialize(this);
+    }
     
 }

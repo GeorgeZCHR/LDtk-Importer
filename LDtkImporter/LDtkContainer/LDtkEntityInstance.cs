@@ -43,4 +43,9 @@ public class LDtkEntityInstance
 
     [JsonPropertyName("__worldY")]
     public int? __WorldY { get; set; } = -1;
+
+    public override string ToString()
+    {
+        return System.Text.Json.JsonSerializer.Serialize(this);
+    }
 }

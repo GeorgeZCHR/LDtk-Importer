@@ -10,4 +10,9 @@ public class LDtkIntGridValuesGroup
 
     [JsonPropertyName("color")]
     public string? Color { get; set; }
+
+    public override string ToString()
+    {
+        return System.Text.Json.JsonSerializer.Serialize(this);
+    }
 }

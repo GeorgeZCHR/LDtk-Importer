@@ -10,4 +10,9 @@ public class LDtkBackgroundPosition
 
     [JsonPropertyName("topLeftPx")]
     public int[] TopLeftPx { get; set; } = new int[2]; // [x,y]
+
+    public override string ToString()
+    {
+        return System.Text.Json.JsonSerializer.Serialize(this);
+    }
 }

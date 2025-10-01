@@ -7,4 +7,9 @@ public class LDtkCustomData
 
     [JsonPropertyName("data")]
     public string Data { get; set; } = "";
+
+    public override string ToString()
+    {
+        return System.Text.Json.JsonSerializer.Serialize(this);
+    }
 }

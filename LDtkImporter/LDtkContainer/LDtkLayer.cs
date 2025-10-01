@@ -43,4 +43,9 @@ public class LDtkLayer
 
     [JsonPropertyName("tilesetDefUid")]
     public int? TilesetDefUid { get; set; }
+
+    public override string ToString()
+    {
+        return System.Text.Json.JsonSerializer.Serialize(this);
+    }
 }

@@ -47,4 +47,9 @@ public class LDtkLevel
     //An array listing all other levels touching this one on the world map.
     [JsonPropertyName("__neighbours")]
     public List<LDtkNeighbour>? __Neighbours { get; set; }
+
+    public override string ToString()
+    {
+        return System.Text.Json.JsonSerializer.Serialize(this);
+    }
 }

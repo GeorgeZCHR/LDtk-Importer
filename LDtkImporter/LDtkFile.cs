@@ -37,4 +37,9 @@ public class LDtkFile //LDtkRoot
 
     [JsonPropertyName("worlds")]
     public List<LDtkWorld>? Worlds { get; set; }
+
+    public override string ToString()
+    {
+        return System.Text.Json.JsonSerializer.Serialize(this);
+    }
 }

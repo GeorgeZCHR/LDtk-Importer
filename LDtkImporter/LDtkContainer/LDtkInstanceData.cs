@@ -19,4 +19,9 @@ public class LDtkInstanceData // Inside Toc
 
     [JsonPropertyName("fields")] // Not enough info
     public object? Fields { get; set; }
+
+    public override string ToString()
+    {
+        return System.Text.Json.JsonSerializer.Serialize(this);
+    }
 }

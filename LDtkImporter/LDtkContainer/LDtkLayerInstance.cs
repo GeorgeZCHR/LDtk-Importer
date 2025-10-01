@@ -64,4 +64,9 @@ public class LDtkLayerInstance
 
     [JsonPropertyName("entityInstances")]
     public List<LDtkEntityInstance> EntityInstances { get; set; } = new List<LDtkEntityInstance>();
+
+    public override string ToString()
+    {
+        return System.Text.Json.JsonSerializer.Serialize(this);
+    }
 }
