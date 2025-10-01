@@ -46,4 +46,9 @@ public class LDtkTileset
 
     [JsonPropertyName("customData")]
     public List<LDtkCustomData>? CustomData { get; set; }
+
+    public override string ToString()
+    {
+        return System.Text.Json.JsonSerializer.Serialize(this);
+    }
 }

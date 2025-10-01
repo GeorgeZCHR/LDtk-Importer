@@ -26,4 +26,9 @@ public class LDtkFieldInstance
 
     [JsonPropertyName("defUid")]
     public int DefUid { get; set; } = -1;
+
+    public override string ToString()
+    {
+        return System.Text.Json.JsonSerializer.Serialize(this);
+    }
 }

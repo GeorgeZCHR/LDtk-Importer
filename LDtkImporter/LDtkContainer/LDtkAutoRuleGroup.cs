@@ -31,4 +31,9 @@ public class LDtkAutoRuleGroup
 
     [JsonPropertyName("biomeRequirementMode")]
     public int BiomeRequirementMode { get; set; } = 0;
+
+    public override string ToString()
+    {
+        return System.Text.Json.JsonSerializer.Serialize(this);
+    }
 }

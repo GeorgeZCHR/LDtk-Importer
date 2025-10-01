@@ -19,4 +19,9 @@ public class LDtkWorld
 
     [JsonPropertyName("worldLayout")]
     public LDtkLevelOrganizer WorldLayout { get; set; } = LDtkLevelOrganizer.Free;
+
+    public override string ToString()
+    {
+        return System.Text.Json.JsonSerializer.Serialize(this);
+    }
 }

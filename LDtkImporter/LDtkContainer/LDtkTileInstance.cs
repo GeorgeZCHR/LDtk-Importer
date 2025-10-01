@@ -18,4 +18,9 @@ public class LDtkTileInstance
 
     [JsonPropertyName("a")]
     public float A { get; set; } = -1;
+
+    public override string ToString()
+    {
+        return System.Text.Json.JsonSerializer.Serialize(this);
+    }
 }

@@ -7,4 +7,9 @@ public class LDtkCachedPixelData
 
     [JsonPropertyName("averageColors")]
     public string AverageColors { get; set; } = "";
+
+    public override string ToString()
+    {
+        return System.Text.Json.JsonSerializer.Serialize(this);
+    }
 }

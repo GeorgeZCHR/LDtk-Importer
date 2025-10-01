@@ -37,4 +37,9 @@ public class LDtkEntity
 
     [JsonPropertyName("pivotY")]
     public float PivotY { get; set; } = -1;
+
+    public override string ToString()
+    {
+        return System.Text.Json.JsonSerializer.Serialize(this);
+    }
 }

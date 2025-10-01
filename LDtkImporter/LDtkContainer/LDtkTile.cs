@@ -17,4 +17,9 @@ public class LDtkTile
 
     [JsonPropertyName("h")]
     public int H { get; set; } = -1;
+
+    public override string ToString()
+    {
+        return System.Text.Json.JsonSerializer.Serialize(this);
+    }
 }

@@ -19,7 +19,12 @@ public class LDtkHeader
 
     [JsonPropertyName("appVersion")]
     public string AppVersion { get; set; } = "";
-    
+
     [JsonPropertyName("url")]
     public string URL { get; set; } = "";
+    
+    public override string ToString()
+    {
+        return System.Text.Json.JsonSerializer.Serialize(this);
+    }
 }

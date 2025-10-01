@@ -7,4 +7,9 @@ public class LDtkSavedSelection
 
     [JsonPropertyName("mode")]
     public string Mode { get; set; } = "";
+
+    public override string ToString()
+    {
+        return System.Text.Json.JsonSerializer.Serialize(this);
+    }
 }

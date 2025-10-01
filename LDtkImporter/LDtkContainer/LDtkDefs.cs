@@ -16,4 +16,9 @@ public class LDtkDefs
 
     [JsonPropertyName("externalEnums")]
     public List<LDtkEnum>? ExternalEnums { get; set; }
+
+    public override string ToString()
+    {
+        return System.Text.Json.JsonSerializer.Serialize(this);
+    }
 }

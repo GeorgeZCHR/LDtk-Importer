@@ -7,4 +7,9 @@ public class LDtkNeighbour
 
     [JsonPropertyName("dir")]
     public string Dir { get; set; } = "";
+
+    public override string ToString()
+    {
+        return System.Text.Json.JsonSerializer.Serialize(this);
+    }
 }

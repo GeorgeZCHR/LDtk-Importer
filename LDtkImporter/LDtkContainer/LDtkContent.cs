@@ -12,4 +12,9 @@ public class LDtkContent
 
     [JsonPropertyName("instancesData")]
     public List<LDtkInstanceData> InstancesData { get; set; } = new List<LDtkInstanceData>();
+
+    public override string ToString()
+    {
+        return System.Text.Json.JsonSerializer.Serialize(this);
+    }
 }

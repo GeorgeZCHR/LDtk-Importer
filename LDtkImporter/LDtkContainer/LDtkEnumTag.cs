@@ -7,4 +7,9 @@ public class LDtkEnumTag
 
     [JsonPropertyName("tileIds")]
     public List<int> TileIds { get; set; } = new List<int>();
+
+    public override string ToString()
+    {
+        return System.Text.Json.JsonSerializer.Serialize(this);
+    }
 }
