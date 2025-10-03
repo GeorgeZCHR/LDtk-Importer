@@ -30,23 +30,23 @@ public class LDtkLevel
     public string __BGColor { get; set; } = "";
 
     [JsonPropertyName("bgRelPath")]
-    public string? BGRelPath { get; set; }
+    public string? BGRelPath { get; set; } = "";
 
     [JsonPropertyName("__bgPos")]
-    public LDtkBackgroundPosition? __BGPos { get; set; }
+    public LDtkBackgroundPosition? __BGPos { get; set; } = new LDtkBackgroundPosition();
 
     [JsonPropertyName("externalRelPath")]
-    public string? ExternalRelPath { get; set; }
+    public string? ExternalRelPath { get; set; } = "";
 
     [JsonPropertyName("fieldInstances")]
-    public List<LDtkFieldInstance>? FieldInstances { get; set; }
+    public List<LDtkFieldInstance>? FieldInstances { get; set; } = new List<LDtkFieldInstance>();
 
     [JsonPropertyName("layerInstances")]
-    public List<LDtkLayerInstance>? LayerInstances { get; set; }
+    public List<LDtkLayerInstance>? LayerInstances { get; set; } = new List<LDtkLayerInstance>();
 
     //An array listing all other levels touching this one on the world map.
     [JsonPropertyName("__neighbours")]
-    public List<LDtkNeighbour>? __Neighbours { get; set; }
+    public List<LDtkNeighbour>? __Neighbours { get; set; } = new List<LDtkNeighbour>();
 
     public override string ToString()
     {

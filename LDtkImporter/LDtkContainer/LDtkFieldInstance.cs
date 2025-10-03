@@ -22,7 +22,7 @@ public class LDtkFieldInstance
     // I will need to make special functions for this
 
     [JsonPropertyName("__tile")]
-    public LDtkTile? __Tile { get; set; }
+    public LDtkTile? __Tile { get; set; } = new LDtkTile();
 
     [JsonPropertyName("defUid")]
     public int DefUid { get; set; } = -1;

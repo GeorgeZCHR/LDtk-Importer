@@ -15,10 +15,10 @@ public class LDtkTileset
     public int Uid { get; set; } = -1;
 
     [JsonPropertyName("relPath")]
-    public string? RelPath { get; set; }
+    public string? RelPath { get; set; } = "";
 
     [JsonPropertyName("embedAtlas")]
-    public LDtkAtlas? EmbedAtlas { get; set; }
+    public LDtkAtlas? EmbedAtlas { get; set; } = LDtkAtlas.NullAtlas;
 
     [JsonPropertyName("pxWid")]
     public int PxWid { get; set; } = -1;
@@ -39,13 +39,13 @@ public class LDtkTileset
     public List<string>? Tags { get; set; }
 
     [JsonPropertyName("tagsSourceEnumUid")]
-    public int? TagsSourceEnumUid { get; set; }
+    public int? TagsSourceEnumUid { get; set; } = -1;
 
     [JsonPropertyName("enumTags")]
-    public List<LDtkEnumTag>? EnumTags { get; set; }
+    public List<LDtkEnumTag>? EnumTags { get; set; } = new List<LDtkEnumTag>();
 
     [JsonPropertyName("customData")]
-    public List<LDtkCustomData>? CustomData { get; set; }
+    public List<LDtkCustomData>? CustomData { get; set; } = new List<LDtkCustomData>();
 
     public override string ToString()
     {

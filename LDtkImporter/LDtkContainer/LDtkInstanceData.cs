@@ -12,13 +12,13 @@ public class LDtkInstanceData // Inside Toc
     public int WorldY { get; set; } = -1;
 
     [JsonPropertyName("widPx")]
-    public int? WidPx { get; set; }
+    public int? WidPx { get; set; } = -1;
 
     [JsonPropertyName("heiPx")]
-    public int? HeiPx { get; set; }
+    public int? HeiPx { get; set; } = -1;
 
     [JsonPropertyName("fields")] // Not enough info
-    public object? Fields { get; set; }
+    public object? Fields { get; set; } = new object();
 
     public override string ToString()
     {

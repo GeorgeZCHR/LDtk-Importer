@@ -27,10 +27,10 @@ public class LDtkLayerInstance
     public int __PxTotalOffsetY { get; set; } = -1;
 
     [JsonPropertyName("__tilesetDefUid")]
-    public int? __TilesetDefUid { get; set; }
+    public int? __TilesetDefUid { get; set; } = -1;
 
     [JsonPropertyName("__tilesetRelPath")]
-    public string? __TilesetRelPath { get; set; }
+    public string? __TilesetRelPath { get; set; } = "";
 
     [JsonPropertyName("iid")]
     public string Iid { get; set; } = "";
@@ -57,10 +57,10 @@ public class LDtkLayerInstance
     public List<LDtkTileInstance> AutoLayerTiles { get; set; } = new List<LDtkTileInstance>();
 
     [JsonPropertyName("overrideTilesetUid")]
-    public int? OverrideTilesetUid { get; set; }
+    public int? OverrideTilesetUid { get; set; } = -1;
 
     [JsonPropertyName("gridTiles")]
-    public List<LDtkTileInstance>? GridTiles { get; set; }
+    public List<LDtkTileInstance>? GridTiles { get; set; } = new List<LDtkTileInstance>();
 
     [JsonPropertyName("entityInstances")]
     public List<LDtkEntityInstance> EntityInstances { get; set; } = new List<LDtkEntityInstance>();
@@ -68,5 +68,14 @@ public class LDtkLayerInstance
     public override string ToString()
     {
         return System.Text.Json.JsonSerializer.Serialize(this);
+    }
+
+    // For Entities It will be null
+    public LDtkTileset? GetTilesetFromTilesetDefUid(LDtkFile file)
+    {
+        if (__TilesetDefUid.HasValue)
+            return file.Defs.Tilesets[__TilesetDefUid.Value];
+
+        return null; // No tileset
     }
 }

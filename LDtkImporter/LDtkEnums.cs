@@ -19,5 +19,6 @@ public enum LDtkTileRenderMode
 
 public enum LDtkAtlas
 {
+    NullAtlas,
     LdtkIcons
 }

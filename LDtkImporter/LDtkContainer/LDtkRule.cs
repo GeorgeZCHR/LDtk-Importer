@@ -75,7 +75,7 @@ public class LDtkRule
     public float PivotY { get; set; } = -1;
 
     [JsonPropertyName("outOfBoundsValue")]
-    public int? OutOfBoundsValue { get; set; }
+    public int? OutOfBoundsValue { get; set; } = -1;
 
     [JsonPropertyName("invalidated")]
     public bool Invalidated { get; set; } = false;

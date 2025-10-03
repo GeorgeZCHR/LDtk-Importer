@@ -39,10 +39,10 @@ public class LDtkLayer
     public List<LDtkIntGridValuesGroup> IntGridValuesGroups { get; set; } = new List<LDtkIntGridValuesGroup>();
 
     [JsonPropertyName("autoSourceLayerDefUid")]
-    public int? AutoSourceLayerDefUid { get; set; }
+    public int? AutoSourceLayerDefUid { get; set; } = -1;
 
     [JsonPropertyName("tilesetDefUid")]
-    public int? TilesetDefUid { get; set; }
+    public int? TilesetDefUid { get; set; } = -1;
 
     public override string ToString()
     {
