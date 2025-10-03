@@ -9,10 +9,10 @@ public class LDtkAutoRuleGroup
     public string Name { get; set; } = "";
 
     [JsonPropertyName("color")]
-    public string? Color { get; set; }
+    public string? Color { get; set; } = "#000000";
 
     [JsonPropertyName("icon")]
-    public LDtkTile? Icon { get; set; } // tile = icon
+    public LDtkTile? Icon { get; set; } = new LDtkTile();// tile = icon
 
     [JsonPropertyName("active")]
     public bool Active { get; set; } = true;
@@ -27,7 +27,7 @@ public class LDtkAutoRuleGroup
     public bool UsesWizard { get; set; } = true;
 
     [JsonPropertyName("requiredBiomeValues")]
-    public List<string>? RequiredBiomeValues { get; set; }
+    public List<string>? RequiredBiomeValues { get; set; } = new List<string>();
 
     [JsonPropertyName("biomeRequirementMode")]
     public int BiomeRequirementMode { get; set; } = 0;

@@ -3,7 +3,7 @@ using System.Text.Json.Serialization;
 public class LDtkTileInstance
 {
     [JsonPropertyName("px")]
-    public int[]? Px { get; set; }
+    public int[]? Px { get; set; } = new int[2] { 0, 0 };
 
     [JsonPropertyName("src")]
     public int[] Src { get; set; } = new int[2];

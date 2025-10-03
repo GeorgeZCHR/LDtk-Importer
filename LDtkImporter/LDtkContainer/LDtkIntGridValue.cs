@@ -12,7 +12,7 @@ public class LDtkIntGridValue
     public string Color { get; set; } = "#000000";
 
     [JsonPropertyName("tile")]
-    public LDtkTile? Tile { get; set; }
+    public LDtkTile? Tile { get; set; } = new LDtkTile();
 
     [JsonPropertyName("groupUid")]
     public int GroupUid { get; set; } = -1;

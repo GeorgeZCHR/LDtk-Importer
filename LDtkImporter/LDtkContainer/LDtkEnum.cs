@@ -12,10 +12,10 @@ public class LDtkEnum
     public List<LDtkEnumValue> EnumValues { get; set; } = new List<LDtkEnumValue>();
 
     [JsonPropertyName("iconTilesetUid")]
-    public int? IconTilesetUid { get; set; }
+    public int? IconTilesetUid { get; set; } = -1;
 
     [JsonPropertyName("externalRelPath")]
-    public string? ExternalRelPath { get; set; }
+    public string? ExternalRelPath { get; set; } = "";
 
     [JsonPropertyName("tags")]
     public List<string> Tags { get; set; } = new List<string>();

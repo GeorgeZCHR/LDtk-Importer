@@ -15,7 +15,7 @@ public class LDtkEntityInstance
     public List<string> __Tags { get; set; } = new List<string>();
 
     [JsonPropertyName("__tile")]
-    public LDtkTile? __Tile { get; set; }
+    public LDtkTile? __Tile { get; set; } = new LDtkTile();
 
     [JsonPropertyName("__smartColor")]
     public string __SmartColor { get; set; } = "#000000";

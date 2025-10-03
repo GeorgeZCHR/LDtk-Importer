@@ -12,16 +12,16 @@ public class LDtkFile //LDtkRoot
     public string JsonVersion { get; set; } = "";
 
     [JsonPropertyName("toc")] // toc : table of contents
-    public List<LDtkContent>? TOC { get; set; }
+    public List<LDtkContent>? TOC { get; set; } = new List<LDtkContent>();
 
     [JsonPropertyName("worldLayout")]
-    public string? WorldLayout { get; set; }
+    public string? WorldLayout { get; set; } = "";
 
     [JsonPropertyName("worldGridWidth")]
-    public int? WorldGridWidth { get; set; }
+    public int? WorldGridWidth { get; set; } = -1;
 
     [JsonPropertyName("worldGridHeight")]
-    public int? WorldGridHeight { get; set; }
+    public int? WorldGridHeight { get; set; } = -1;
 
     [JsonPropertyName("bgColor")]
     public string BGColor { get; set; } = "#000000";
@@ -36,7 +36,7 @@ public class LDtkFile //LDtkRoot
     public List<LDtkLevel> Levels { get; set; } = new List<LDtkLevel>();
 
     [JsonPropertyName("worlds")]
-    public List<LDtkWorld>? Worlds { get; set; }
+    public List<LDtkWorld>? Worlds { get; set; } = new List<LDtkWorld>();
 
     public override string ToString()
     {
