@@ -73,8 +73,11 @@ public class LDtkLayerInstance
     // For Entities It will be null
     public LDtkTileset? GetTilesetFromTilesetDefUid(LDtkFile file)
     {
-        if (__TilesetDefUid.HasValue)
-            return file.Defs.Tilesets[__TilesetDefUid.Value];
+        if (!__TilesetDefUid.HasValue || file.Defs.Tilesets == null) return null;
+
+        for (int i = 0; i < file.Defs.Tilesets.Count; i++)
+            if (file.Defs.Tilesets[i].Uid == __TilesetDefUid.Value)
+                return file.Defs.Tilesets[i];
 
         return null; // No tileset
     }
